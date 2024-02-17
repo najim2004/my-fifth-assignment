@@ -28,11 +28,20 @@
         .common-color {
             color: rgba(3, 7, 18, 0.60);
         }
+
+        .common-green {
+            color: #1DD100;
+        }
+
+        .common-bg {
+            background-color: #1DD100;
+        }
     </style>
 </head>
 
-<body class="inter">
-    <header class="container max-w-[1171px] mx-auto mt-10">
+<body class="inter space-y-[120px]">
+    <header class="container max-w-[1171px] mx-auto mt-10 space-y-9">
+        <!-- navbar section start here -->
         <nav>
             <div class="navbar bg-base-100 flex justify-between">
 
@@ -81,6 +90,52 @@
                 </div>
             </div>
         </nav>
+        <!-- navbar section end here -->
+
+        <!-- banner section start here -->
+        <section class="relative">
+            <div
+                class="flex flex-col items-center justify-center rounded-[32px] h-[550px] bg-[linear-gradient(180deg,rgba(3,7,18,0.50),rgba(3,7,18,0.00)),url('./images/banner.png')] bg-cover bg-center">
+                <h1 class="raleway text-[64px] font-extrabold text-white text-center">End-to-End Travel with
+                    <br>
+                    <span class="common-green">P Paribahan</span>
+                </h1>
+                <p class="max-w-[691px] text-center text-white text-[18px] mb-8">Yes, you can run unit tests and view
+                    the results directly within the app. The integrated testing features allow for a streamlined.</p>
+                <button
+                    class="text-black btn raleway common-bg h-[65px] w-[170px] text-xl font-bold rounded-xl border-none">Buy
+                    Tickets</button>
+            </div>
+            <div class="absolute -bottom-[70px] flex gap-6 w-full justify-center">
+                <div class="h-[138px] w-[300px] flex bg-white items-center justify-center gap-4 border-b-[3px] border-[#1DD100] rounded-[24px]">
+                    <img src="./images/people.png" alt="" class="size-16">
+                    <p class="space-y-1">
+                        <span class="text-4xl font-bold">500K+</span>
+                        <br>
+                        <span class="text-[18px] common-color">Registered users</span>
+                    </p>
+                </div>
+
+                <div class="h-[138px] w-[300px] flex bg-white items-center justify-center gap-4 border-b-[3px] border-[#1DD100] rounded-[24px]">
+                    <img src="./images/ticket-cupon.png" alt="" class="size-16">
+                    <p class="space-y-1">
+                        <span class="text-4xl font-bold">1.7 lacks</span>
+                        <br>
+                        <span class="text-[18px] common-color">Tickets sold</span>
+                    </p>
+                </div>
+
+                <div class="h-[138px] w-[300px] flex bg-white items-center justify-center gap-4 border-b-[3px] border-[#1DD100] rounded-[24px]">
+                    <img src="./images/stoppage.png" alt="" class="size-16">
+                    <p class="space-y-1">
+                        <span class="text-4xl font-bold">80K+</span>
+                        <br>
+                        <span class="text-[18px] common-color">Rental partners</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- banner section end here -->
     </header>
     <main>
 
