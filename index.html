@@ -5,11 +5,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>P Paribahan</title>
+
+    <!-- Tailwind and DaisyUI CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .raleway {
+            font-family: "Raleway", sans-serif;
+        }
+
+        .inter {
+            font-family: "Inter", sans-serif;
+        }
+
+        .common-color {
+            color: rgba(3, 7, 18, 0.60);
+        }
+    </style>
 </head>
 
-<body>
-    <header>
+<body class="inter">
+    <header class="container max-w-[1171px] mx-auto mt-10">
+        <nav>
+            <div class="navbar bg-base-100 flex justify-between">
 
+
+                <div class="flex justify-between w-full lg:w-40">
+
+                    <a class="btn-ghost text-2xl lg:text-4xl raleway font-extrabold">P-Ticket</a>
+
+                    <div class="dropdown">
+
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+
+                        </div>
+
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content right-0 mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Destination</a></li>
+                            <li><a>Search</a></li>
+                            <li><a>Bus <img class="" src="./images/bus-icon.png" alt=""></a></li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="hidden raleway lg:flex">
+                    <ul class="menu menu-horizontal font-medium common-color text-[18px] px-1">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
+                </div>
+                <div class="hidden lg:flex">
+                    <a
+                        class="btn border-[1px] border-[rgba(29,209,0,0.40)] h-14 w-[130px] bg-[rgba(29,209,0,0.10)] text-xl font-bold text-[#1DD100]">Bus
+                        <img class="size-6" src="./images/bus-icon.png" alt=""></a>
+                </div>
+            </div>
+        </nav>
     </header>
     <main>
 
