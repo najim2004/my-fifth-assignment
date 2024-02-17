@@ -39,7 +39,7 @@
     </style>
 </head>
 
-<body class="inter space-y-[120px]">
+<body class="inter ">
     <header class="container max-w-[1171px] mx-auto mt-10 space-y-9">
         <!-- navbar section start here -->
         <nav>
@@ -93,9 +93,9 @@
         <!-- navbar section end here -->
 
         <!-- banner section start here -->
-        <section class="relative">
+        <section class="lg:relative">
             <div
-                class="flex flex-col items-center justify-center rounded-[32px] h-[550px] bg-[linear-gradient(180deg,rgba(3,7,18,0.50),rgba(3,7,18,0.00)),url('./images/banner.png')] bg-cover bg-center">
+                class="flex flex-col items-center justify-center rounded-[32px] h-full lg:h-[550px] bg-[linear-gradient(180deg,rgba(3,7,18,0.50),rgba(3,7,18,0.00)),url('./images/banner.png')] bg-cover bg-center">
                 <h1 class="raleway text-[64px] font-extrabold text-white text-center">End-to-End Travel with
                     <br>
                     <span class="common-green">P Paribahan</span>
@@ -106,8 +106,9 @@
                     class="text-black btn raleway common-bg h-[65px] w-[170px] text-xl font-bold rounded-xl border-none">Buy
                     Tickets</button>
             </div>
-            <div class="absolute -bottom-[70px] flex gap-6 w-full justify-center">
-                <div class="h-[138px] w-[300px] flex bg-white items-center justify-center gap-4 border-b-[3px] border-[#1DD100] rounded-[24px]">
+            <div class="lg:absolute -bottom-[70px] flex gap-6 w-full justify-center">
+                <div
+                    class="h-[138px] w-[300px] flex bg-white items-center justify-center gap-4 border-b-[3px] border-[#1DD100] rounded-[24px]">
                     <img src="./images/people.png" alt="" class="size-16">
                     <p class="space-y-1">
                         <span class="text-4xl font-bold">500K+</span>
@@ -116,7 +117,8 @@
                     </p>
                 </div>
 
-                <div class="h-[138px] w-[300px] flex bg-white items-center justify-center gap-4 border-b-[3px] border-[#1DD100] rounded-[24px]">
+                <div
+                    class="h-[138px] w-[300px] flex bg-white items-center justify-center gap-4 border-b-[3px] border-[#1DD100] rounded-[24px]">
                     <img src="./images/ticket-cupon.png" alt="" class="size-16">
                     <p class="space-y-1">
                         <span class="text-4xl font-bold">1.7 lacks</span>
@@ -125,7 +127,8 @@
                     </p>
                 </div>
 
-                <div class="h-[138px] w-[300px] flex bg-white items-center justify-center gap-4 border-b-[3px] border-[#1DD100] rounded-[24px]">
+                <div
+                    class="h-[138px] w-[300px] flex bg-white items-center justify-center gap-4 border-b-[3px] border-[#1DD100] rounded-[24px]">
                     <img src="./images/stoppage.png" alt="" class="size-16">
                     <p class="space-y-1">
                         <span class="text-4xl font-bold">80K+</span>
@@ -137,8 +140,71 @@
         </section>
         <!-- banner section end here -->
     </header>
-    <main>
+    <main class="mt-[180px] scroll-py-[120px]">
+        <!-- Best offers for you section start here -->
+        <section class="container max-w-[1171px] space-y-12 mx-auto mb-[300px]">
+            <h3 class="raleway text-[40px] font-bold text-center">Best offers for you</h3>
 
+            <!-- Coupon container -->
+            <div class="flex flex-col lg:flex-row gap-6">
+                <!-- 1st Coupon -->
+                <div class="w-full lg:w-[573px] h-[220px] bg-[#FFBF0F] rounded-[24px] flex px-3 lg:px-10 items-center">
+
+                    <p class="w-full text-center lg:text-left">
+                        <span class="text-2xl lg:text-[40px] font-black ">15% OFF</span>
+                        <br>
+                        <span class="text-xl font-semibold">on your next purchase</span>
+                        <br>
+                        <span class="text-[18px] text-[rgba(3,7,18,0.50)] font-medium">use by January 2024</span>
+                    </p>
+
+                    <div class="cupon1 flex flex-col items-center justify-center h-full">
+                        <div class="size-9 bg-white rounded-bl-[50%] rounded-br-[50%]"></div>
+                        <hr class="h-[220px] border-dashed border-l-[2px] border-white transform-[90deg]">
+                        <div class="size-9 bg-white rounded-tl-[50%] rounded-tr-[50%]"></div>
+                    </div>
+
+                    <pc class="w-[200px]">
+                        <span class="raleway text-2xl lg:text-[32px] font-bold">NEW15</span>
+                        <br>
+                        <span class="w-full text-xl font-medium text-[rgba(3,7,18,0.50)]">Coupon Code</span>
+                    </p>
+                </div>
+                <!-- 2nd Coupon -->
+                <div class="w-full lg:w-[573px] h-[220px] bg-[#F78C9C] rounded-[24px] flex px-6 lg:px-8 items-center">
+
+                    <p class="w-full text-center lg:text-left lg:mr-11">
+                        <span class="raleway text-2xl lg:text-[40px] font-black ">20% OFF</span>
+                        <br>
+                        <span class="text-xl font-semibold">on your next purchase</span>
+                        <br>
+                        <span class="text-[18px] text-[rgba(3,7,18,0.50)] font-medium">use by January 2024</span>
+                    </p>
+
+                    <div class="cupon1 flex flex-col items-center justify-center h-full">
+                        <div class="size-9 bg-white rounded-bl-[50%] rounded-br-[50%]"></div>
+                        <hr class="h-[220px] border-dashed border-l-[2px] border-white transform-[90deg]">
+                        <div class="size-9 bg-white rounded-tl-[50%] rounded-tr-[50%]"></div>
+                    </div>
+
+                    <pc class="w-[200px] lg:w-[320px] lg:ml-6">
+                        <span class="raleway text-2xl lg:text-[32px] font-bold">Couple 20</span>
+                        <br>
+                        <span class="text-xl font-medium text-[rgba(3,7,18,0.50)]">Coupon Code</span>
+                    </p>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <button class="btn w-[188px] h-[65px] common-green raleway text-xl font-bold bg-white border-[1px] border-[#1DD100] rounded-xl">See All Offers</button>
+            </div>
+        </section>
+        <!-- Best offers for you section end here -->
+
+        <!-- Tickets booking section start here -->
+        <section>
+
+        </section>
+        <!-- Tickets booking section end here -->
     </main>
     <footer>
 
