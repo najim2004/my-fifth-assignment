@@ -206,7 +206,7 @@
 
         <!-- Tickets booking section start here -->
         <section
-            class="bg-[#F7F8F8] h-full py-[40px] px-3 lg:px-0 lg:py-[120px] rounded-[88px] border-t-[3px] border-[#1DD100]">
+            class="bg-[#F7F8F8] h-full py-[40px] px-3 lg:px-0 lg:py-[120px] rounded-[44px] lg:rounded-[88px] border-t-[3px] border-[#1DD100]">
             <div class="container max-w-[1171px] mx-auto h-full">
                 <h3 class="lg:text-[40px] text-[25px] font-bold text-center raleway">P.H Paribahan</h3>
                 <p class="text-[18px] text-center mx-auto mt-5 max-w-[736px] common-color">Yes, you can run unit tests
@@ -270,7 +270,7 @@
                         </h3>
                     </div>
                 </div>
-                <div class="bg-white min-h-[200px] lg:p-8 rounded-[24px] flex h-full gap-8">
+                <div class="bg-white min-h-[200px] lg:p-8 rounded-[24px] lg:flex h-full gap-9">
                     <div class="">
                         <h3 class="raleway text-2xl font-semibold">Select Your Seat</h3>
                         <hr class="border-dashed border-t-[2px] border-[rgba(3,7,18,0.20)] my-6">
@@ -287,15 +287,17 @@
 
                         <!-- seat selecting area -->
                         <div class="">
-                            <div class="flex mb-6 justify-end">
+
+                            <div class="flex mb-6 justify-center lg:justify-end">
                                 <div
                                     class="h-[56px] w-[110px] rounded-xl flex items-center justify-center bg-[rgba(3,7,18,0.10)]">
                                     <img src="./images/driver-seat.svg" alt="">
                                 </div>
                             </div>
-                            <div class="flex gap-[26px] items-center">
+
+                            <div class="flex gap-[26px] justify-center items-center">
                                 <div
-                                    class="common-color text-[18px] font-semibold grid grid-cols-1 gap-6 *:h-[56px] *:flex *:items-center">
+                                    class="hidden common-color text-[18px] font-semibold lg:grid grid-cols-1 gap-6 *:h-[56px] *:flex *:items-center">
                                     <div class="">A</div>
                                     <div class="">B</div>
                                     <div class="">C</div>
@@ -307,7 +309,7 @@
                                     <div class="">I</div>
                                     <div class="">J</div>
                                 </div>
-                                <div class="flex gap-[66px]">
+                                <div class="flex justify-center flex-wrap lg:flex-nowrap gap-[66px]">
 
                                     <div
                                         class="grid grid-cols-2 *:h-[56px] *:w-[110px] *:bg-[#F7F8F8] *:rounded-xl text-[18px] font-semibold common-color gap-6">
@@ -399,14 +401,14 @@
                             </div>
                         </div>
                     </div>
-                    <hr class="h-[1000px] border-dashed border-l-[3px] border-[rgba(3,7,18,0.30)] transform-[90deg]">
+                    <hr class="min-h-[1000px] hidden lg:flex border-dashed border-l-[3px] border-[rgba(3,7,18,0.30)] transform-[90deg]">
 
-                    <div class="">
+                    <div class="p-3">
                         <div class="">
                             <h3 class="raleway text-2xl font-semibold">Select Your Seat</h3>
                             <hr class="w-full border-dashed border-t-[2px] border-[rgba(3,7,18,0.20)] my-6">
                         </div>
-                        <div class="min-w-[433px] min-h-[335px] bg-[#F7F8F8] p-8 rounded-xl">
+                        <div class="lg:min-w-[433px] min-h-[335px] bg-[#F7F8F8] p-2 lg:mx-0 lg:p-8 rounded-xl">
 
                             <div class="overflow-x-auto">
                                 <table class="table">
@@ -437,7 +439,7 @@
                                     <p class="">BDT <span>1100</span></p>
                                 </div>
                                 <div class="bg-white h-[56px] rounded-xl flex items-center p-2 mt-4 mb-6">
-                                    <input class="outline-none flex-1 h-full pl-5" type="text"
+                                    <input class="outline-none w-[80%] lg:flex-1 h-full pl-5" type="text"
                                         placeholder="Have any Coupon?">
                                     <button
                                         class="btn-ghost font-semibold rounded-lg w-[80px] h-[40px] common-bg text-white">Apply</button>
