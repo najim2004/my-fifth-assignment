@@ -11,8 +11,8 @@ function getElementInnerTextById(elementId) {
     return getElementById(elementId).innerText;
 }
 
-function buyTicketButton(){
-    getElementById('ph-paribahan').scrollIntoView({behavior: 'smooth'});
+function buyTicketButton() {
+    getElementById('ph-paribahan').scrollIntoView({ behavior: 'smooth' });
 }
 
 const seats = document.getElementsByClassName('seats');
@@ -80,7 +80,7 @@ function totalPrice() {
 
 getElementById('coupon-check').addEventListener('keyup', function (e) {
     let totalPrice = getElementById('total-price').innerText;
-    if ((e.target.value !== '') && parseInt(totalPrice) !== 0) {
+    if ((e.target.value !== '') && parseInt(totalPrice) !== 0 && seatBooked==4) {
         getElementById('apply').removeAttribute('disabled');
     }
 
@@ -116,7 +116,7 @@ function applyCoupon() {
 getElementById('phone-number').addEventListener('keyup', function (e) {
     const bookedSeats = parseInt(getElementInnerTextById('seat-booked'));
     const pName = getElementById('passenger-name');
-    const pNumber = getElementById('phone-number');
+    // const pNumber = getElementById('phone-number');
     if (bookedSeats !== 0) {
         if (pName.value !== '' && e.target.value !== '') {
             getElementById('next-btn').removeAttribute('disabled');
@@ -125,6 +125,23 @@ getElementById('phone-number').addEventListener('keyup', function (e) {
 })
 
 
-function showModal(){
+function showModal() {
+    // next btn
     getElementById('modal').classList.remove('hidden');
+    getElementById('passenger-name').value='';
+    getElementById('phone-number').value='';
+    
+}
+
+function modalContinueBtn() {
+    getElementById('tbody').innerHTML='';
+    getElementById('seat-booked').innerText=0;
+    getElementById('total-price').innerText=0;
+    getElementById('grand-price').innerText=0;
+    getElementById('discount').innerText=0;
+    getElementById('modal').classList.add('hidden')
+    getElementById('next-btn').disabled=true;
+    getElementById('discount-div').classList.add('hidden');
+
+
 }

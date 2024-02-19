@@ -95,7 +95,7 @@
         <!-- banner section start here -->
         <section class="lg:relative">
             <div
-                class="flex flex-col items-center justify-center rounded-[32px] h-full lg:h-[550px] bg-[linear-gradient(180deg,rgba(3,7,18,0.50),rgba(3,7,18,0.00)),url('./images/banner.png')] bg-cover bg-center">
+                class="flex flex-col items-center justify-center rounded-[32px] h-full lg:h-[550px] bg-[linear-gradient(180deg,rgba(3,7,18,0.50),rgba(3,7,18,0.00)),url('./images/banner.png')] bg-cover bg-center py-3 lg:py-0">
                 <h1 class="raleway text-[32px] lg:text-[64px] font-extrabold text-white text-center">End-to-End Travel
                     with
                     <br>
@@ -141,7 +141,7 @@
         <!-- banner section end here -->
     </header>
 
-    <main class="mt-[180px] px-5 lg:px-0 space-y-[120px]">
+    <main class="lg:mt-[180px] mt-5 px-5 lg:px-0 space-y-5 lg:space-y-[120px]">
         <!-- Best offers for you section start here -->
         <section class=" container max-w-[1171px] space-y-12 mx-auto">
             <h3 class="raleway text-[40px] font-bold text-center">Best offers for you</h3>
@@ -213,7 +213,7 @@
                 <div class="bg-[#FFFFFF] lg:h-[418px] rounded-[24px] p-8 lg:flex gap-6 mt-12 mb-7">
                     <div class="lg:w-[808px]">
                         <div class="lg:flex justify-between">
-                            <div class="flex gap-3 items-center">
+                            <div class="flex flex-col lg:flex-row gap-3 text-center lg:text-start items-center mb-5 lg:mb-0">
                                 <img class="max-w-[68px] max-h-[48px]" src="./images/bus-logo.png" alt="">
                                 <h3>
                                     <span class="raleway lg:text-[32px] font-bold">Greenline Paribahan</span>
@@ -269,7 +269,7 @@
                 </div>
                 <div class="bg-white min-h-[200px] lg:p-8 rounded-[24px] lg:flex h-full gap-9">
                     <div class="">
-                        <h3 class="raleway text-2xl font-semibold">Select Your Seat</h3>
+                        <h3 class="text-center lg:text-start raleway text-2xl font-semibold">Select Your Seat</h3>
                         <hr class="border-dashed border-t-[2px] border-[rgba(3,7,18,0.20)] my-6">
                         <p class="text-[18px] font-medium flex justify-between">
                             <span class=" common-color flex items-center gap-2">
@@ -402,8 +402,8 @@
                         class="min-h-[1000px] hidden lg:flex border-dashed border-l-[3px] border-[rgba(3,7,18,0.30)] transform-[90deg]">
 
                     <div class="p-3">
-                        <div class="">
-                            <h3 class="raleway text-2xl font-semibold">Select Your Seat</h3>
+                        <div class="mt-5 lg:mt-0">
+                            <h3 class="raleway text-2xl font-semibold text-center lg:text-start">Select Your Seat</h3>
                             <hr class="w-full border-dashed border-t-[2px] border-[rgba(3,7,18,0.20)] my-6">
                         </div>
                         <div class="lg:min-w-[433px] min-h-[335px] bg-[#F7F8F8] p-2 lg:mx-0 lg:p-8 rounded-xl">
@@ -505,7 +505,7 @@
                 We are working hard to find the best service and deals for you. 
             </p>
             <p class="mb-5 text-[19px] font-light">Shortly you will find a confirmation in your email.</p>
-            <button class="btn h-[55px] w-[300px] rounded-[32px] text-xl font-semibold text-white bg-[#27AE60]">Continue</button>
+            <button onclick="modalContinueBtn()" class="btn h-[55px] w-[300px] rounded-[32px] text-xl font-semibold text-white bg-[#27AE60]">Continue</button>
         </div>
     </section>
     <!-- modal section end here -->
