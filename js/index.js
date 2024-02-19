@@ -17,19 +17,20 @@ function buyTicketButton() {
 
 const seats = document.getElementsByClassName('seats');
 let seatBooked = parseInt(getElementInnerTextById('seat-booked'));
-
+let seatAlreadyBooked=0;
 for (const seat of seats) {
     seat.addEventListener('click', function () {
         if (seatBooked !== 4) {
             seat.style.backgroundColor = '#1DD100';
             this.disabled = true;
             seatBooked++;
+            seatAlreadyBooked++;
+
             document.getElementById('seat-booked').innerText = parseInt(getElementInnerTextById('seat-booked')) + 1;
             const seatNumber = seat.innerText;
             BookedSeatDetails(seatNumber);
             totalPrice();
             seatsLeft()
-            getElementById('already-booked').innerText = seatBooked;
             extra()
 
 
@@ -149,6 +150,8 @@ function showModal() {
     getElementById('phone-number').value = '';
     getElementById('email-id').value = '';
     getElementById('coupon-div').classList.add('hidden');
+    getElementById('already-booked').innerText = seatAlreadyBooked;
+
 }
 
 function modalContinueBtn() {
