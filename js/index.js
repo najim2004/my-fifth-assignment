@@ -20,7 +20,7 @@ let seatBooked = parseInt(getElementInnerTextById('seat-booked'));
 
 for (const seat of seats) {
     seat.addEventListener('click', function () {
-        if (parseInt(getElementInnerTextById('already-booked')) != 4) {
+        if (seatBooked <= 3) {
             seat.style.backgroundColor = '#1DD100';
             this.disabled = true;
             seatBooked++;
@@ -30,6 +30,7 @@ for (const seat of seats) {
             totalPrice();
             seatsLeft()
         }
+
     })
 }
 
@@ -80,7 +81,7 @@ function totalPrice() {
 
 getElementById('coupon-check').addEventListener('keyup', function (e) {
     let totalPrice = getElementById('total-price').innerText;
-    if ((e.target.value !== '') && parseInt(totalPrice) !== 0 && seatBooked==4) {
+    if ((e.target.value !== '') && parseInt(totalPrice) !== 0 && seatBooked == 4) {
         getElementById('apply').removeAttribute('disabled');
     }
 
@@ -128,25 +129,25 @@ getElementById('phone-number').addEventListener('keyup', function (e) {
 function showModal() {
     // next btn
     getElementById('modal').classList.remove('hidden');
-    getElementById('passenger-name').value='';
-    getElementById('phone-number').value='';
-    
+    getElementById('passenger-name').value = '';
+    getElementById('phone-number').value = '';
+
 }
 
 function modalContinueBtn() {
-    getElementById('tbody').innerHTML='';
-    getElementById('seat-booked').innerText=0;
-    getElementById('total-price').innerText=0;
-    getElementById('grand-price').innerText=0;
-    getElementById('discount').innerText=0;
+    getElementById('tbody').innerHTML = '';
+    getElementById('seat-booked').innerText = 0;
+    getElementById('total-price').innerText = 0;
+    getElementById('grand-price').innerText = 0;
+    getElementById('discount').innerText = 0;
     getElementById('modal').classList.add('hidden')
-    getElementById('next-btn').disabled=true;
+    getElementById('next-btn').disabled = true;
     getElementById('discount-div').classList.add('hidden');
     alreadyBooked();
-    seatBooked=0;
+    // seatBooked = 0;
 }
 
-function alreadyBooked(){
-    getElementById('already-booked').innerText=parseInt(getElementById('already-booked').innerText)+seatBooked;
+function alreadyBooked() {
+    getElementById('already-booked').innerText = parseInt(getElementById('already-booked').innerText) + seatBooked;
     getElementById('already-booked-container').classList.remove('hidden');
 }
