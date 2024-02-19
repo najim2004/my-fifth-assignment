@@ -22,6 +22,7 @@ for (const seat of seats) {
     seat.addEventListener('click', function () {
         if (seatBooked != 4) {
             seat.style.backgroundColor = '#1DD100';
+            this.disabled = true;
             seatBooked++;
             document.getElementById('seat-booked').innerText = seatBooked;
             const seatNumber = seat.innerText;
