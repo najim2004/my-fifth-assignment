@@ -20,15 +20,19 @@ let seatBooked = parseInt(getElementInnerTextById('seat-booked'));
 
 for (const seat of seats) {
     seat.addEventListener('click', function () {
-        if (seatBooked <= 3) {
+        if (seatBooked !== 4) {
             seat.style.backgroundColor = '#1DD100';
             this.disabled = true;
             seatBooked++;
-            document.getElementById('seat-booked').innerText = seatBooked;
+            document.getElementById('seat-booked').innerText = parseInt(getElementInnerTextById('seat-booked')) + 1;
             const seatNumber = seat.innerText;
             BookedSeatDetails(seatNumber);
             totalPrice();
             seatsLeft()
+            getElementById('already-booked').innerText = seatBooked;
+            extra()
+
+
         }
 
     })
@@ -60,9 +64,6 @@ function BookedSeatDetails(seatNumber) {
 
     td2.innerText = 550;
     tr.appendChild(td2);
-
-
-
 }
 
 function totalPrice() {
@@ -75,8 +76,6 @@ function totalPrice() {
     getElementById('total-price').innerText = totalPriceInt;
     const grandtotal = getElementById('grand-price');
     grandtotal.innerText = totalPriceInt;
-
-
 }
 
 getElementById('coupon-check').addEventListener('keyup', function (e) {
@@ -84,9 +83,15 @@ getElementById('coupon-check').addEventListener('keyup', function (e) {
     if ((e.target.value !== '') && parseInt(totalPrice) !== 0 && seatBooked == 4) {
         getElementById('apply').removeAttribute('disabled');
     }
-
 })
 
+function extra() {
+    const e = getElementById('coupon-check')
+    let totalPrice = getElementById('total-price').innerText;
+    if ((e.value !== '') && parseInt(totalPrice) !== 0 && seatBooked == 4) {
+        getElementById('apply').removeAttribute('disabled');
+    }
+}
 function applyCoupon() {
     const couponCode = getElementById('coupon-check').value;
     let totalPrice = getElementById('total-price').innerText;
@@ -103,7 +108,7 @@ function applyCoupon() {
     else if (couponCode == 'COUPLE20') {
         const grandPrice = totalPrice - totalPrice * (20 / 100);
         grandtotal.innerText = grandPrice;
-        getElementById('coupon-div').classList.add('hidden')
+        getElementById('coupon-div').classList.add('hidden');
         discount.innerText = totalPrice * (20 / 100);
         getElementById('discount-div').classList.remove('hidden');
 
@@ -125,13 +130,25 @@ getElementById('phone-number').addEventListener('keyup', function (e) {
     }
 })
 
+getElementById('passenger-name').addEventListener('keyup', function (e) {
+    const bookedSeats = parseInt(getElementInnerTextById('seat-booked'));
+    // const pName = getElementById('passenger-name');
+    const pNumber = getElementById('phone-number');
+    if (bookedSeats !== 0) {
+        if (pNumber.value !== '' && e.target.value !== '') {
+            getElementById('next-btn').removeAttribute('disabled');
+        }
+    }
+})
+
 
 function showModal() {
     // next btn
     getElementById('modal').classList.remove('hidden');
     getElementById('passenger-name').value = '';
     getElementById('phone-number').value = '';
-
+    getElementById('email-id').value = '';
+    getElementById('coupon-div').classList.add('hidden');
 }
 
 function modalContinueBtn() {
@@ -144,10 +161,9 @@ function modalContinueBtn() {
     getElementById('next-btn').disabled = true;
     getElementById('discount-div').classList.add('hidden');
     alreadyBooked();
-    // seatBooked = 0;
+
 }
 
 function alreadyBooked() {
-    getElementById('already-booked').innerText = parseInt(getElementById('already-booked').innerText) + seatBooked;
     getElementById('already-booked-container').classList.remove('hidden');
 }
