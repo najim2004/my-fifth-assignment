@@ -20,7 +20,7 @@ let seatBooked = parseInt(getElementInnerTextById('seat-booked'));
 
 for (const seat of seats) {
     seat.addEventListener('click', function () {
-        if (seatBooked != 4) {
+        if (parseInt(getElementInnerTextById('already-booked')) != 4) {
             seat.style.backgroundColor = '#1DD100';
             this.disabled = true;
             seatBooked++;
@@ -142,5 +142,11 @@ function modalContinueBtn() {
     getElementById('modal').classList.add('hidden')
     getElementById('next-btn').disabled=true;
     getElementById('discount-div').classList.add('hidden');
+    alreadyBooked();
     seatBooked=0;
+}
+
+function alreadyBooked(){
+    getElementById('already-booked').innerText=parseInt(getElementById('already-booked').innerText)+seatBooked;
+    getElementById('already-booked-container').classList.remove('hidden');
 }
