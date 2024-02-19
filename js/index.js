@@ -142,6 +142,5 @@ function modalContinueBtn() {
     getElementById('modal').classList.add('hidden')
     getElementById('next-btn').disabled=true;
     getElementById('discount-div').classList.add('hidden');
-
-
+    seatBooked=0;
 }
