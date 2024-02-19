@@ -39,7 +39,7 @@
     </style>
 </head>
 
-<body class="mx-5 lg:mx-0 inter ">
+<body class="relative mx-5 lg:mx-0 inter ">
     <header class="container max-w-[1171px] mx-auto mt-10 space-y-9">
         <!-- navbar section start here -->
         <nav>
@@ -103,7 +103,7 @@
                 </h1>
                 <p class="max-w-[691px] text-center text-white text-[18px] mb-8">Yes, you can run unit tests and view
                     the results directly within the app. The integrated testing features allow for a streamlined.</p>
-                <button
+                <button onclick="buyTicketButton()"
                     class="text-black btn raleway common-bg lg:h-[65px] lg:w-[170px] text-xl font-bold rounded-xl border-none">Buy
                     Tickets</button>
             </div>
@@ -144,7 +144,7 @@
 
     <main class="mt-[180px] space-y-[120px]">
         <!-- Best offers for you section start here -->
-        <section class="container max-w-[1171px] space-y-12 mx-auto">
+        <section class=" container max-w-[1171px] space-y-12 mx-auto">
             <h3 class="raleway text-[40px] font-bold text-center">Best offers for you</h3>
 
             <!-- Coupon container -->
@@ -205,7 +205,7 @@
         <!-- Best offers for you section end here -->
 
         <!-- Tickets booking section start here -->
-        <section
+        <section id="ph-paribahan"
             class="bg-[#F7F8F8] h-full py-[40px] px-3 lg:px-0 lg:py-[120px] rounded-[44px] lg:rounded-[88px] border-t-[3px] border-[#1DD100]">
             <div class="container max-w-[1171px] mx-auto h-full">
                 <h3 class="lg:text-[40px] text-[25px] font-bold text-center raleway">P.H Paribahan</h3>
@@ -439,11 +439,17 @@
                                     <p class="">Total Price</p>
                                     <p class="">BDT <span id="total-price">0</span></p>
                                 </div>
-                                <div id="coupon-div" class="bg-white h-[56px] rounded-xl flex items-center p-2 mt-4 mb-6">
-                                    <input id="coupon-check" class="outline-none w-[80%] lg:flex-1 h-full pl-5" type="text"
-                                        placeholder="Have any Coupon?">
+                                <div id="coupon-div"
+                                    class="bg-white h-[56px] rounded-xl flex items-center p-2 mt-4 mb-6">
+                                    <input id="coupon-check" class="outline-none w-[80%] lg:flex-1 h-full pl-5"
+                                        type="text" placeholder="Have any Coupon?">
                                     <button id="apply"
-                                        class="btn font-semibold rounded-lg w-[80px] h-[40px] common-bg text-white" onclick="applyCoupon()" disabled >Apply</button>
+                                        class="btn font-semibold rounded-lg w-[80px] h-[40px] common-bg text-white"
+                                        onclick="applyCoupon()" disabled>Apply</button>
+                                </div>
+                                <div id="discount-div" class="hidden font-semibold flex justify-between mt-4">
+                                    <p class="">Discount TK</p>
+                                    <p class="">BDT <span id="discount">0</span></p>
                                 </div>
                                 <div class="font-semibold flex justify-between mt-4">
                                     <p class="">Grand Total</p>
@@ -459,7 +465,7 @@
 
                             <div class="">
                                 <p class="font-semibold">Passenger Name*</p>
-                                <input id="passenger-name" 
+                                <input id="passenger-name"
                                     class="w-full min-h-[64px] pl-6 rounded-xl  border-[1px] border-[rgba(3,7,18,0.10)] mt-4"
                                     type="text" placeholder="Enter your name">
                             </div>
@@ -477,7 +483,7 @@
                                     class="w-full min-h-[64px] pl-6 rounded-xl  border-[1px] border-[rgba(3,7,18,0.10)] mt-4"
                                     type="email" placeholder="Enter your email id">
                             </div>
-                            <button id="next-btn"
+                            <button id="next-btn" onclick="showModal()"
                                 class="btn w-full h-[65px] rounded-[16px] common-bg raleway text-xl font-extrabold text-white"
                                 disabled>Next</button>
                         </div>
@@ -490,7 +496,22 @@
             </div>
         </section>
         <!-- Tickets booking section end here -->
+
+        <!-- modal section start here -->
     </main>
+    <section id="modal" class="hidden fixed top-0 bg-[#F2F1F1] h-screen w-screen flex justify-center items-center">
+        <div class="h-[481px] w-[718px] bg-white rounded-xl flex flex-col justify-center items-center text-center lg:px-[70px]">
+            <img class="size[95px]" src="./images/success.png" alt="">
+            <h3 class="lg:my-[25px] text-[#27AE60] text-2xl font-bold">SUCCESS</h3>
+            <p class="mb-2 text-[19px] font-medium text-[#4A4A4A]">Thank you for Booking Our Bus Seats.
+                <br> 
+                We are working hard to find the best service and deals for you. 
+            </p>
+            <p class="mb-5 text-[19px] font-light">Shortly you will find a confirmation in your email.</p>
+            <button class="btn h-[55px] w-[300px] rounded-[32px] text-xl font-semibold text-white bg-[#27AE60]">Continue</button>
+        </div>
+    </section>
+    <!-- modal section end here -->
     <footer class="">
 
 

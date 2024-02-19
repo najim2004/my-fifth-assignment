@@ -11,6 +11,9 @@ function getElementInnerTextById(elementId) {
     return getElementById(elementId).innerText;
 }
 
+function buyTicketButton(){
+    getElementById('ph-paribahan').scrollIntoView({behavior: 'smooth'});
+}
 
 const seats = document.getElementsByClassName('seats');
 let seatBooked = parseInt(getElementInnerTextById('seat-booked'));
@@ -76,36 +79,51 @@ function totalPrice() {
 
 getElementById('coupon-check').addEventListener('keyup', function (e) {
     let totalPrice = getElementById('total-price').innerText;
-    console.log(e);
-    if ((e.target.value == 'NEW15' || e.target.value == 'COUPLE20') && parseInt(totalPrice) !== 0) {
+    if ((e.target.value !== '') && parseInt(totalPrice) !== 0) {
         getElementById('apply').removeAttribute('disabled');
     }
 
 })
 
 function applyCoupon() {
-    const couponCode = getElementById('coupon-check').value
+    const couponCode = getElementById('coupon-check').value;
     let totalPrice = getElementById('total-price').innerText;
-
+    let discount = getElementById('discount');
     const grandtotal = getElementById('grand-price');
     if (couponCode == 'NEW15') {
         const grandPrice = totalPrice - totalPrice * (15 / 100);
         grandtotal.innerText = grandPrice;
+        getElementById('coupon-div').classList.add('hidden')
+        discount.innerText = totalPrice * (15 / 100);
+        getElementById('discount-div').classList.remove('hidden');
+
     }
     else if (couponCode == 'COUPLE20') {
         const grandPrice = totalPrice - totalPrice * (20 / 100);
         grandtotal.innerText = grandPrice;
+        getElementById('coupon-div').classList.add('hidden')
+        discount.innerText = totalPrice * (20 / 100);
+        getElementById('discount-div').classList.remove('hidden');
+
     }
-    getElementById('coupon-div').classList.add('hidden')
+    else {
+        alert('Invalid Coupon!! Please type valid coupon code');
+    }
+    getElementById('coupon-check').value = '';
 }
 
-getElementById('submit-section').addEventListener('mousemove', function () {
+getElementById('phone-number').addEventListener('keyup', function (e) {
     const bookedSeats = parseInt(getElementInnerTextById('seat-booked'));
     const pName = getElementById('passenger-name');
     const pNumber = getElementById('phone-number');
     if (bookedSeats !== 0) {
-        if (pName.value !== '' && pNumber.value !== '') {
+        if (pName.value !== '' && e.target.value !== '') {
             getElementById('next-btn').removeAttribute('disabled');
         }
     }
 })
+
+
+function showModal(){
+    getElementById('modal').classList.remove('hidden');
+}
